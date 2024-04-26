@@ -18,7 +18,7 @@ function loadPage() {
     pageAfterLoad.setAttribute("class", "")
     pageBeforeLoad.setAttribute("class", "hidden")
 }
-function fakeLoadingScreen() { //I just dont want mobile users... ok?
+function fakeLoadingScreen() { //make using on mobile annoying
     loadingTime.innerHTML = loadTimeCounter
     loadTimeCounter += 1;
 
