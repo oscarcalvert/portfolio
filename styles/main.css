@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--headerFont);
+    font-family: var(--headerFont); 
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -186,7 +186,7 @@ footer a:hover {
     min-height: 55vh;
 }
 #heroSection img {
-    width: 100%;
+    width: 100vw;
     margin-block-start: 5em;
     -webkit-user-drag: none;
     -webkit-user-select: none;
