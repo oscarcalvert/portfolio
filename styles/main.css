@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Voces&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+
 :root {
     --background: #060606;
     --text: #f1f1f1;
@@ -7,7 +8,7 @@
     --textOutline: #e4e4e4;
     --primary: #a32ef7;
     --accent: #5e00a5;
-    --headerFont:"Footlight MT Light", impact, Voces;
+    --headerFont: "Footlight MT Light", impact, Voces;
     --bodyFont: "Open Sans", impact;
     background-color: var(--background);
     color: var(--text);
@@ -20,10 +21,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--headerFont); 
+    font-family: var(--headerFont);
     font-weight: 500;
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
 }
 
 html {
@@ -81,30 +86,34 @@ li {
 /* HEADER */
 header {
     font-family: Poppins, impact;
+    font-weight: 500;
+    font-size: 0.8em;
     position: fixed;
     width: 100%;
     top: 0;
-
     z-index: 1000000;
-    padding-block: 1em;
+    padding-block: 0.5em;
     margin: 0;
     transition: all 0.6s;
+    backdrop-filter: blur(5px);
+    background-color: rgba(108, 108, 108, 0.027);
+    border-block-end: 1px solid rgba(163, 163, 163, 0.13);
+    text-align: center;
 }
 
-#desktop-header {
-    border-block-end: 1px solid var(--outline);
-    background-color: var(--background);
+/* #desktop-header {
 }
 
 #desktop-header-placeholder {
     border-block-end: 1px solid transparent;
     background-color: none;
-}
+} */
 
 header>ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2em;
     user-select: none;
 }
 
@@ -185,6 +194,7 @@ footer a:hover {
     text-align: center;
     min-height: 55vh;
 }
+
 #heroSection img {
     width: 100vw;
     margin-block-start: 5em;
@@ -236,27 +246,68 @@ footer a:hover {
     display: flex;
     justify-content: space-evenly;
 }
+
 #aboutSection i {
     margin-inline-end: 0.5em;
 }
 
 /* UNIVERSAL CLASSES */
-.ctaButton {
-    background-color: var(--accent);
-    color: var(--text);
-    outline: none;
+.ctaButtonBorder {
+    background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(23, 23, 23, 0));
+    border-radius: 8px;
     border: none;
-    padding-inline: 3em;
-    padding-block: 1em;
-    border-radius: 5px;
+    width: 15em;
     transition: all 0.6s;
+    user-select: none;
 }
 
-.ctaButton:hover {
-    transform: translateY(-5px);
+.ctaButtonContent {
+    color: var(--text);
+    z-index: 1;
+    background-color: var(--background);
+    margin: 0.1em;
+    padding-inline: 1em;
+    padding-block: 0.3em;
+    border-radius: 6px;
+
+}
+
+.ctaButtonArea {
+    display: flex;
+    justify-content: center;
+}
+
+.ctaButtonBorder:hover {
+    transform: translateY(-10px);
+    animation-name: buttonHoverAnimation;
+    animation-duration: 0.3s;
+    background: radial-gradient(circle 110px, rgb(86, 0, 162), rgb(86, 0, 162));
+}
+
+@keyframes buttonHoverAnimation {
+    0% {
+        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.0));
+    }
+
+    25% {
+        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.25));
+    }
+
+    50% {
+        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.5));
+    }
+
+    75% {
+        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.75));
+    }
+
+    100% {
+        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 1));
+    }
 }
 
 .currentSection {
+
     color: var(--primary);
 }
 
@@ -264,6 +315,7 @@ footer a:hover {
     text-align: center;
     transform: translateY(40vh);
 }
+
 .hidden {
     display: none;
 }
@@ -285,7 +337,8 @@ footer a:hover {
         justify-content: center;
         flex-wrap: wrap;
     }
-    #aboutSectionContent > * {
+
+    #aboutSectionContent>* {
         width: 90vw;
         margin: 1em;
     }
