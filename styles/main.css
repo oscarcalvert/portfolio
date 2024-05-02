@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Voces&?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+
 @font-face {
-    font-family: 'Footlight MT Light';
+    font-family: 'Footlight';
     src: url(./FootlightMTProRegular.otf);
 }
+
 :root {
     --background: #060606;
     --text: #f1f1f1;
     --outline: #151515;
     --textOutline: #e4e4e4;
     --primary: #a32ef7;
-    --accent: #5e00a5;
-    --headerFont: "Footlight MT Light", impact, Voces;
+    --primary2: #2e67f7;
+    --primary3: #2ef7a7;
+    --primary4: #f0f72e;
+    --primary5: #f7672e;
+    --headerFont: "Footlight", impact, Voces;
     --bodyFont: "Open Sans", impact;
     background-color: var(--background);
     color: var(--text);
@@ -110,6 +115,16 @@ header {
     border-block-end: 1px solid transparent;
     background-color: none;
 } */
+header li:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+}
+
+#headerIcon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 header>ul {
     list-style: none;
@@ -130,7 +145,7 @@ header a {
 }
 
 header a:hover {
-    color: var(--primary);
+    filter: blur(1px);
 }
 
 /* MAIN */
@@ -214,7 +229,7 @@ footer a:hover {
     transform: translate(-50%, -50%);
     width: 99vw;
     height: 120vh;
-    background: radial-gradient(rgb(163, 46, 500), rgba(163, 46, 247, 0.150) 20%);
+    background: radial-gradient(var(--primary), rgba(163, 46, 247, 0.150) 20%);
     filter: blur(10em);
     z-index: -1;
 }
@@ -241,6 +256,7 @@ footer a:hover {
     transition: all 1s;
     animation: outlineGradient 0.5s ease;
 }
+
 #aboutSectionContent>*>* {
     width: 25vw;
     height: 25vw;
@@ -253,9 +269,10 @@ footer a:hover {
     overflow: hidden;
 }
 
-#aboutSectionContent>*:hover{
-    background: radial-gradient(circle 300px at 50% 0%, var(--primary), var(--outline));
+#aboutSectionContent>*:hover {
+    background: radial-gradient(circle 300px at 50% 0%, var(--primary2), var(--outline));
 }
+
 #aboutSectionContent>*:hover>* {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(100px);
@@ -268,11 +285,13 @@ footer a:hover {
     transition: all 1s;
     margin-block: 2em;
 }
+
 #aboutSection small {
     width: 100vw;
     text-align: center;
     color: var(--textOutline);
 }
+
 .aboutSectionCard {
     display: flex;
     flex-direction: column;
@@ -281,9 +300,11 @@ footer a:hover {
     transition: all 0.6s;
     position: relative;
 }
+
 .aboutSectionCard p {
     margin-block: 0.3em;
 }
+
 .aboutSectionCard p:nth-of-type(1) {
     font-size: 4em;
     font-family: var(--headerFont);
@@ -291,33 +312,92 @@ footer a:hover {
     transform: translateY(1em);
 
 }
-.aboutSectionCard p:nth-of-type(2),.aboutSectionCard p:nth-of-type(3) {
+
+.aboutSectionCard p:nth-of-type(2),
+.aboutSectionCard p:nth-of-type(3) {
     font-size: 1.1em;
     transition: all 0.6s;
     line-height: 1.5em;
 }
-.aboutSectionCard p:nth-of-type(2),.aboutSectionCard p:nth-of-type(3) {
+
+.aboutSectionCard p:nth-of-type(2),
+.aboutSectionCard p:nth-of-type(3) {
     opacity: 0;
 }
+
 .aboutSectionCard p:nth-of-type(2) {
     color: gray;
     font-size: 0.8em;
 }
-.aboutSectionCard:hover p:nth-of-type(2),.aboutSectionCard:hover p:nth-of-type(3) {
+
+.aboutSectionCard:hover p:nth-of-type(2),
+.aboutSectionCard:hover p:nth-of-type(3) {
     opacity: 1;
     transform: translateY(-1em);
 }
+
 .aboutSectionCard:hover p:nth-of-type(1) {
     font-size: 4em;
     transform: translateY(0em);
-    color: var(--primary);
+    color: var(--primary2);
 }
+
 .hoverIndicator {
     color: gray;
     text-align: center;
     font-size: 0.7em;
 }
 
+/* PROJECTS SECTION */
+#projectsSection>h2 {
+    text-align: center;
+    margin-block-start: 1em;
+}
+
+#projectsArea input {
+    display: none;
+}
+#projectsArea {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#projectsArea > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.projectsAreaProject {
+    padding: 1em;
+    width: 50vw;
+    border: 1px solid var(--outline);
+    border-radius: 5px;
+}
+.projectsAreaProject p {
+    margin-block: 1em;
+}
+.projectsAreaProject .projectDesc {
+    overflow: hidden;
+    height: 0em;
+    transition: all 0.3s;
+}
+
+.projectsAreaProject input[type="radio"]:checked + .projectDesc {
+    height: 10em;
+}
+input[type="radio"]:checked > .projectsAreaProject {
+    border: 1px solid var(--primary3);
+}
+
+.projectsAreaProject a {
+    background-color: var(--primary3);
+    color: var(--background);
+    text-decoration: none;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border-radius: 5px;
+}
 /* UNIVERSAL CLASSES */
 .ctaButtonBorder {
     background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(23, 23, 23, 0));
@@ -386,6 +466,7 @@ footer a:hover {
     #aboutSectionContent>* {
         margin: 1em;
     }
+
     #aboutSectionContent>*>* {
         width: 90vw;
         height: 15em;
@@ -420,12 +501,15 @@ footer a:hover {
         background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 1));
     }
 }
+
 @keyframes outlineGradient {
     0% {
         background: radial-gradient(circle 300px at 50% 0%, var(--outline), var(--outline));
     }
+
     100% {
         background: radial-gradient(circle 300px at 50% 0%, var(--primary), var(--outline));
     }
 }
+
 /* FIXING GITHUV CAUSE ITS NOT LOADING FONTS>????? */
