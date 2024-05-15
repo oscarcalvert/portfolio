@@ -603,6 +603,7 @@ section {
     header {
         display: none;
     }
+    /* other stuff */
 
     #aboutSectionContent {
         justify-content: center;
