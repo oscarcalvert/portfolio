@@ -14,21 +14,23 @@
     <div id="loading">
         <p>
             designed for a desktop experience.<br>
+            mobile use is discouraged. <br>
             loading <span id="loadingTime">0</span>%
         </p>
     </div>
     <div id="loaded" class="hidden">
         <header id="desktopHeader">
             <ul>
-                <li><a class="goToHome">Home</a></li>
                 <li><a class="goToAbout">About</a></li>
-                <li>
-                    <div id="headerIcon">
-                        <img src="./media/icon.png" width="20" alt="icon">
-                    </div>
-                </li>
                 <li><a class="goToProjects">Projects</a></li>
+                <li>
+                    <a id="headerIcon" class="goToHome">
+                        <img src="./media/icon.png" width="20" alt="icon">
+                    </a>
+                </li>
+                
                 <li><a class="goToSkills">Skills</a></li>
+                <li><a class="goToContact">Contact</a></li>
             </ul>
         </header>
         <main>
@@ -48,17 +50,15 @@
 
             <section id="aboutSection">
                 <h2>About</h2>
-                <div class="hoverIndicator">(hover)</div>
                 <div id="aboutSectionContent">
                     <div>
                         <div class="aboutSectionCard">
                             <p>WHO?</p>
                             <p>some information about me</p>
                             <p>
-                                This will be a bunch of stuff about who I am :)
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus, atque nobis id
-                                veniam nam ea quam excepturi accusantium repellat, ab totam a animi, voluptate facere?
-                                Labore ipsum ab repudiandae.
+                                stuff about me blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
                             </p>
 
                         </div>
@@ -68,10 +68,9 @@
                             <p>WHEN?</p>
                             <p>some of my history</p>
                             <p>
-                                This will be a bit of my history :)
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus, atque nobis id
-                                veniam nam ea quam excepturi accusantium repellat, ab totam a animi, voluptate facere?
-                                Labore ipsum ab repudiandae.
+                                some of my history blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
                             </p>
 
                         </div>
@@ -81,10 +80,9 @@
                             <p>WHERE?</p>
                             <p>some information about my education</p>
                             <p>
-                                This will be a bit of my education :)
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus, atque nobis id
-                                veniam nam ea quam excepturi accusantium repellat, ab totam a animi, voluptate facere?
-                                Labore ipsum ab repudiandae.
+                                where i went to school blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
                             </p>
 
                         </div>
@@ -94,43 +92,211 @@
 
             <section id="projectsSection">
                 <h2>Projects</h2>
-                <div class="hoverIndicator">(click)</div>
                 <div id="projectsArea">
                     <div>
                         <div class="projectsAreaProject">
-                            <h4><label for="rb1">Project 1</label></h4>
-                            <input name="rb" type="radio" id="rb1">
+                            <input name="cb" type="checkbox" id="cb1">
+                            <label for="cb1">
+                                <!-- I KNOW THESE CANT BE LABEL CHILDREN BUT WHATEVER -->
+                                <div class="projectHeader">
+                                    <h4>Connect N</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
                             <div class="projectDesc">
-                                <p>Description: this is an exmaple description, an actual one will come eventually :)
+                                <p>Description: Connect N is a game largely based off Connect 4. Although the amount of
+                                    rows,
+                                    columns, and checkers in a row to win are customizable. Made entirely in Java.
                                 </p>
-                                <a href="https://github.com/oscarcalvert">Coming soon!</a>
+                                <a class="projectButton">Coming soon!</a>
                             </div>
                         </div>
                         <div class="projectsAreaProject">
-                            <h4><label for="rb2">Project 2</label></h4>
-                            <input name="rb" type="radio" id="rb2">
+                            <input name="cb" type="checkbox" id="cb2">
+                            <label for="cb2">
+                                <div class="projectHeader">
+                                    <h4>Spaced</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
                             <div class="projectDesc">
-                                <p>Description: this is an exmaple description, an actual one will come eventually :)
+                                <p>Description: Simple static website I created for an assignment, focuses on mostly
+                                    HTML and CSS.
+                                    The idea for the fictional product was based off the movie
+                                    <a href="https://www.imdb.com/title/tt0100802/">Total Recall</a>.
                                 </p>
-                                <a href="https://github.com/oscarcalvert">Coming soon!</a>
+                                <a href="https://oscarcalvert.github.io/Website-rewrite/" class="projectButton">Visit
+                                    Spaced</a>
+                                <a href="https://github.com/oscarcalvert/Website-rewrite" class="projectButton">Github
+                                    Project</a>
                             </div>
                         </div>
                         <div class="projectsAreaProject">
-                            <h4><label for="rb3">Project 3</label></h4>
-                            <input name="rb" type="radio" id="rb3">
+                            <input name="cb" type="checkbox" id="cb3">
+                            <label for="cb3">
+                                <div class="projectHeader">
+                                    <h4>Perplexity Rewrite</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
                             <div class="projectDesc">
-                                <p>Description: this is an exmaple description, an actual one will come eventually :)
+                                <p>Description: I really liked the UI <a href="https://www.perplexity.ai/">Perplexity
+                                        AI</a> was using, so for CSS practice
+                                    I decided to recreate it as closely as possible. Although it has since updated and
+                                    changed.
+                                    <span class="extraInfo">(does not work on mobile)</span>
                                 </p>
-                                <a href="https://github.com/oscarcalvert">Coming soon!</a>
+                                <a href="https://oscarcalvert.github.io/perplexity-html-rewrite/"
+                                    class="projectButton">Github Project</a>
                             </div>
                         </div>
                         <div class="projectsAreaProject">
-                            <h4><label for="rb4">Project 4</label></h4>
-                            <input name="rb" type="radio" id="rb4">
+
+                            <input name="cb" type="checkbox" id="cb4">
+                            <label for="cb4">
+                                <div class="projectHeader">
+                                    <h4>Coming soon</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
                             <div class="projectDesc">
-                                <p>Description: this is an exmaple description, an actual one will come eventually :)
+                                <p>Description: coming soon
                                 </p>
-                                <a href="https://github.com/oscarcalvert">Coming soon!</a>
+                                <a class="projectButton">Coming soon!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skillsSection">
+                <h2>Skills</h2>
+                <div class="skillsGridWrapper">
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/js.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/java.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Java</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/html.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/css.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/jq.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>JQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/posh.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Powershell</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/office.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Office Suite</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/vscode.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>VSCode profeciency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/jetbrains.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>JetBrains profeciency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/communication.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Communication</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/detail.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Attention to detail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/troubleshooting.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Troubleshooting</p>
                             </div>
                         </div>
                     </div>

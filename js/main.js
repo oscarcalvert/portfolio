@@ -25,17 +25,17 @@ function fakeLoadingScreen() { //make using on mobile annoying
     if (loadTimeCounter <= 100) { 
         let rand = Math.round(Math.random() * 100)
         if (rand <= 25)
-            setTimeout(fakeLoadingScreen, 100)
+            setTimeout(fakeLoadingScreen, 10)
         else if (rand <= 50)
-            setTimeout(fakeLoadingScreen, 40)
+            setTimeout(fakeLoadingScreen, 20)
         else if (rand <= 75)
-            setTimeout(fakeLoadingScreen, 50)
-        else if (rand > 90)
-            setTimeout(fakeLoadingScreen, 200)
-        else
             setTimeout(fakeLoadingScreen, 30)
+        else if (rand > 90)
+            setTimeout(fakeLoadingScreen, 40)
+        else
+            setTimeout(fakeLoadingScreen, 50)
     } else {
-        setTimeout(loadPage, 2000)
+        setTimeout(loadPage, 300)
     }
 }
 

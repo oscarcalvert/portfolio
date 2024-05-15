@@ -10,16 +10,25 @@
     --text: #f1f1f1;
     --outline: #151515;
     --textOutline: #e4e4e4;
-    --primary: #a32ef7;
-    --primary2: #2e67f7;
-    --primary3: #2ef7a7;
-    --primary4: #f0f72e;
-    --primary5: #f7672e;
+    --primary1: rgb(255, 85, 85);
+    --primary2: rgb(255, 180, 74);
+    --primary3: rgb(76, 250, 154);
+    --primary4: rgb(72, 123, 252);
+    --primary5: rgb(153, 75, 255);
     --headerFont: "Footlight", impact, Voces;
     --bodyFont: "Open Sans", impact;
     background-color: var(--background);
     color: var(--text);
     font-family: var(--bodyFont);
+    transition: all 0.6s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
 }
 
 /* SETTING PAGE DEFAULTS AND STYLES */
@@ -42,6 +51,9 @@ html {
     font-size: 100%;
     overflow-x: hidden;
 }
+img {
+    user-select: none;
+}
 
 /* 16px */
 
@@ -51,7 +63,8 @@ h1 {
 }
 
 h2 {
-    font-size: 3.997rem;
+    font-size: 7rem;
+    text-align: center;
     /* 64px */
 }
 
@@ -144,8 +157,20 @@ header a {
     transition: all 0.6s;
 }
 
-header a:hover {
-    filter: blur(1px);
+header a[class="goToAbout"]:hover {
+    color: var(--primary2);
+}
+
+header a[class="goToProjects"]:hover {
+    color: var(--primary3);
+}
+
+header a[class="goToSkills"]:hover {
+    color: var(--primary4);
+}
+
+header a[class="goToContact"]:hover {
+    color: var(--primary5);
 }
 
 /* MAIN */
@@ -201,9 +226,28 @@ footer a {
     text-decoration: none;
     transition: all 0.6s;
 }
-
 footer a:hover {
-    color: var(--primary);
+    color: gray;
+}
+
+footer a[class="goToHome"]:hover {
+    color: var(--primary1);
+}
+
+footer a[class="goToAbout"]:hover {
+    color: var(--primary2);
+}
+
+footer a[class="goToProjects"]:hover {
+    color: var(--primary3);
+}
+
+footer a[class="goToSkills"]:hover {
+    color: var(--primary4);
+}
+
+footer a[class="goToContact"]:hover {
+    color: var(--primary5);
 }
 
 /* HERO SECTION */
@@ -229,7 +273,7 @@ footer a:hover {
     transform: translate(-50%, -50%);
     width: 99vw;
     height: 120vh;
-    background: radial-gradient(var(--primary), rgba(163, 46, 247, 0.150) 20%);
+    background: radial-gradient(var(--primary1), rgba(255, 85, 85, 0.15) 20%);
     filter: blur(10em);
     z-index: -1;
 }
@@ -240,14 +284,7 @@ footer a:hover {
 
 /* ABOUT SECTION */
 #aboutSection {
-    background-color: var(--background);
-    border-block-start: 1px solid var(--outline);
-    margin-block-start: 3.5em;
-}
-
-#aboutSection>h2 {
-    text-align: center;
-    margin-block-start: 1em;
+    background: radial-gradient(circle 600px at 50% 50%, rgba(255, 180, 74, 0.032), rgba(255, 180, 74, 0.007));
 }
 
 #aboutSectionContent>* {
@@ -342,27 +379,30 @@ footer a:hover {
     color: var(--primary2);
 }
 
-.hoverIndicator {
-    color: gray;
-    text-align: center;
-    font-size: 0.7em;
-}
+
 
 /* PROJECTS SECTION */
-#projectsSection>h2 {
-    text-align: center;
-    margin-block-start: 1em;
+#projectsSection {
+    background: radial-gradient(circle 600px at 50% 50%, rgba(60, 255, 148, 0.032), rgba(60, 255, 148, 0.007));
 }
 
 #projectsArea input {
     display: none;
 }
+
+.projectsAreaProject a {
+    color: var(--primary3);
+    text-decoration: none;
+}
+
 #projectsArea {
+    margin-block: 2em;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-#projectsArea > div {
+
+#projectsArea>div {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -373,40 +413,143 @@ footer a:hover {
     width: 50vw;
     border: 1px solid var(--outline);
     border-radius: 5px;
+    transition: all 0.3s;
+    background-color: var(--background);
 }
+
 .projectsAreaProject p {
     margin-block: 1em;
 }
+
 .projectsAreaProject .projectDesc {
     overflow: hidden;
     height: 0em;
     transition: all 0.3s;
 }
 
-.projectsAreaProject input[type="radio"]:checked + .projectDesc {
-    height: 10em;
+.projectsAreaProject input[type="checkbox"]:checked~.projectDesc {
+    height: 8em;
 }
-input[type="radio"]:checked > .projectsAreaProject {
+
+input[type="checkbox"]:checked>.projectsAreaProject {
     border: 1px solid var(--primary3);
 }
 
-.projectsAreaProject a {
+input[type="checkbox"]:checked~label .projectHeader>div>img {
+    transform: rotate(90deg);
+}
+
+.projectHeader img {
+    transition: all 0.3s;
+}
+
+.projectButton {
+    transition: all 0.6s;
+    border: 1px solid transparent;
     background-color: var(--primary3);
-    color: var(--background);
+    color: var(--background) !important;
     text-decoration: none;
     padding-block: 0.5em;
     padding-inline: 1em;
     border-radius: 5px;
+    user-select: none;
 }
+
+.projectButton:hover {
+    border: 1px solid var(--primary3);
+    background-color: var(--background);
+    color: var(--primary3) !important;
+}
+
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectHeader>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectsAreaProject {
+    transition: all 0.6s;
+}
+
+.projectsAreaProject:has(input[type="checkbox"]:checked) {
+    border: 1px solid var(--primary3);
+}
+
+/* SKILLS AREA */
+.skillsSection {
+    background: radial-gradient(circle 600px at 50% 50%, rgba(41, 101, 255, 0.043), rgba(41, 101, 255, 0.007));
+}
+
+.skillsSection p {
+    margin: 0;
+}
+
+.skillsGridWrapper {
+    margin-block: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-inline: 20vw;
+}
+
+.skillsGridWrapper>div {
+    display: flex;
+    justify-content: center;
+}
+
+.skillsImgWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.skillBG {
+    background: radial-gradient(circle 150px at 50% 100%, rgb(41, 101, 255), var(--outline));
+}
+
+.skillContent {
+    font-family: var(--bodyFont);
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3em);
+    transition: all 0.6s;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.skillBG:hover .skillContent {
+    background-color: rgb(0, 0, 0, 0.65);
+}
+
 /* UNIVERSAL CLASSES */
+section:not(section:nth-of-type(1)) {
+    padding-block: 10em;
+}
+
+section {
+    padding-block-end: 10em;
+    border-block-end: 1px solid var(--outline);
+}
+
 .ctaButtonBorder {
-    background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(23, 23, 23, 0));
+    background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(23, 23, 23, 0));
     border-radius: 8px;
     border: none;
     width: 15em;
     transition: all 0.6s;
     user-select: none;
 }
+
 
 .ctaButtonContent {
     color: var(--text);
@@ -428,11 +571,10 @@ input[type="radio"]:checked > .projectsAreaProject {
     transform: translateY(-10px);
     animation-name: buttonHoverAnimation;
     animation-duration: 0.3s;
-    background: radial-gradient(circle 110px, rgb(86, 0, 162), rgb(86, 0, 162));
+    background: radial-gradient(circle 110px, rgb(255, 85, 85), rgb(255, 85, 85));
 }
 
 .currentSection {
-
     color: var(--primary);
 }
 
@@ -443,6 +585,10 @@ input[type="radio"]:checked > .projectsAreaProject {
 
 .hidden {
     display: none;
+}
+
+.extraInfo {
+    color: gray;
 }
 
 @media (max-width:1000px) {
@@ -465,12 +611,28 @@ input[type="radio"]:checked > .projectsAreaProject {
 
     #aboutSectionContent>* {
         margin: 1em;
+        margin-inline: 10em;
     }
 
     #aboutSectionContent>*>* {
-        width: 90vw;
-        height: 15em;
+        width: 85vw;
+        height: 20em;
         margin: 0.1em;
+    }
+
+    .projectsAreaProject input[type="checkbox"]:checked~.projectDesc {
+        padding-block-end: 8em;
+    }
+
+    .projectsAreaProject {
+        margin: 2vw;
+        width: 85vw;
+    }
+
+    .skillsGridWrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -482,23 +644,23 @@ input[type="radio"]:checked > .projectsAreaProject {
 
 @keyframes buttonHoverAnimation {
     0% {
-        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.0));
+        background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(255, 85, 85, 0.0));
     }
 
     25% {
-        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.25));
+        background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(255, 85, 85, 0.25));
     }
 
     50% {
-        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.5));
+        background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(255, 85, 85, 0.5));
     }
 
     75% {
-        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 0.75));
+        background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(255, 85, 85, 0.75));
     }
 
     100% {
-        background: radial-gradient(circle 110px, rgb(86, 0, 162), rgba(86, 0, 162, 1));
+        background: radial-gradient(circle 110px, rgb(255, 85, 85), rgba(255, 85, 85, 1));
     }
 }
 
