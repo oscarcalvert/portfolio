@@ -23,6 +23,8 @@
     transition: all 0.6s;
 }
 
+
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -51,6 +53,7 @@ html {
     font-size: 100%;
     overflow-x: hidden;
 }
+
 img {
     user-select: none;
 }
@@ -139,6 +142,7 @@ header li:nth-of-type(3) {
     flex-direction: column;
 }
 
+
 header>ul {
     list-style: none;
     display: flex;
@@ -155,6 +159,7 @@ header a {
     color: var(--text);
     text-decoration: none;
     transition: all 0.6s;
+    height: 20px;
 }
 
 header a[class="goToAbout"]:hover {
@@ -190,6 +195,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    transition: all 0.6s;
 }
 
 #mobileFooter {
@@ -226,6 +232,7 @@ footer a {
     text-decoration: none;
     transition: all 0.6s;
 }
+
 footer a:hover {
     color: gray;
 }
@@ -481,11 +488,11 @@ input[type="checkbox"]:checked~label .projectHeader>div>img {
 }
 
 /* SKILLS AREA */
-.skillsSection {
+#skillsSection {
     background: radial-gradient(circle 600px at 50% 50%, rgba(41, 101, 255, 0.043), rgba(41, 101, 255, 0.007));
 }
 
-.skillsSection p {
+#skillsSection p {
     margin: 0;
 }
 
@@ -591,6 +598,27 @@ section {
     color: gray;
 }
 
+#textColor1 {
+    color: var(--primary1);
+    fill: var(--primary1);
+}
+
+#textColor2 {
+    color: var(--primary2);
+}
+
+#textColor3 {
+    color: var(--primary3);
+}
+
+#textColor4 {
+    color: var(--primary4);
+}
+
+#textColor5 {
+    color: var(--primary5);
+}
+
 @media (max-width:1000px) {
     #mobileFooter {
         display: block;
@@ -603,6 +631,7 @@ section {
     header {
         display: none;
     }
+
     /* other stuff */
 
     #aboutSectionContent {
@@ -637,9 +666,23 @@ section {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 666px) {
     .removeWhenTooSmall {
-        display: none;
+        display: none !important;
+    }
+
+    .skillsGridWrapper {
+        margin-inline: 0vw;
+
+    }
+
+    .skillContent {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skillContent p {
+        font-size: 0.8em;
     }
 }
 
@@ -673,4 +716,12 @@ section {
     100% {
         background: radial-gradient(circle 300px at 50% 0%, var(--primary), var(--outline));
     }
+}
+svg {
+    fill: var(--text);
+    size: 20;
+    transition: all 0.6s;
+}
+svg:hover {
+    fill: var(--primary1);
 }
