@@ -9,7 +9,7 @@
     --background: #060606;
     --text: #f1f1f1;
     --outline: #151515;
-    --textOutline: #e4e4e4;
+    --textOutline: #6c6c6c;
     --primary1: rgb(255, 85, 85);
     --primary2: rgb(255, 180, 74);
     --primary3: rgb(76, 250, 154);
@@ -330,12 +330,6 @@ footer a[class="goToContact"]:hover {
     margin-block: 2em;
 }
 
-#aboutSection small {
-    width: 100vw;
-    text-align: center;
-    color: var(--textOutline);
-}
-
 .aboutSectionCard {
     display: flex;
     flex-direction: column;
@@ -538,6 +532,108 @@ input[type="checkbox"]:checked~label .projectHeader>div>img {
     background-color: rgb(0, 0, 0, 0.65);
 }
 
+/* Contact AREA */
+#contactSection {
+    background: radial-gradient(circle 600px at 50% 50%, rgba(153, 75, 255, 0.059), rgba(153, 75, 255, 0.007));
+}
+.contactGridWrapper {
+    display: grid;
+    grid-template-columns: 0.49fr 0.02fr 0.49fr;
+}
+.contactOption {
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.contactOption >h3 + * {
+    margin-block: 2em;
+}
+.contactOption >div>form {
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    gap: 1em;
+}
+.contactOption:nth-of-type(1) >div {
+    display: flex;
+    justify-content: center;
+}
+.contactOption input, .contactOption textarea {
+    font-family: var(--bodyFont);
+    font-size: 1em;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid transparent;
+    border-block-end: 1px solid var(--outline);
+    color: var(--text);
+    resize: none;
+    width: 100%;
+    size: 100;
+    padding-block: 5px;
+    transition: all 0.6s;
+}
+.contactOption input:focus, .contactOption textarea:focus {
+    border-block-end: 1px solid var(--primary5);
+}
+.contactOption input:hover, .contactOption textarea:hover {
+    border: 1px solid var(--primary5);
+}
+.contactOption textarea {
+    border:1px solid var(--outline);
+}
+.contactOption input[type="button"] {
+    border: 1px solid var(--outline);
+    padding: 0.4em;
+}
+.contactOption input[type="button"]:focus {
+    border-block-end: 1px solid var(--outline);
+}
+.contactSplitter {
+    display: flex;
+    flex-direction: column;
+}
+.contactSplitter > div {
+    height: 100%;
+}
+.contactSplitter div>div>div {
+    background-color: var(--textOutline);
+    height: 100%;
+    width: 1px;
+}
+.contactSplitter > div > div {
+    display: flex;
+    justify-content: center;
+    height: 45%;
+}
+.contactSplitter p {
+    text-align: center;
+    color: var(--textOutline);
+}
+
+.contactOption ul {
+    height: 100%;
+    text-align: start;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactOption ul li a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2em;
+    transition: all 0.6s;
+}
+.contactOption ul li a:hover {
+    color: var(--primary5);
+}
+.socialsList {
+    display: flex;
+    justify-content: center;
+}
+
 /* UNIVERSAL CLASSES */
 section:not(section:nth-of-type(1)) {
     padding-block: 10em;
@@ -683,6 +779,13 @@ section {
 
     .skillContent p {
         font-size: 0.8em;
+    }
+    .contactGridWrapper {
+        grid-template-columns:1fr;
+        grid-template-rows:  0.49fr 0.02fr 0.49fr;
+    }
+    .contactSplitter > div>div {
+        display: none;
     }
 }
 
