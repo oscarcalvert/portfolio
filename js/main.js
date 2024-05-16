@@ -13,6 +13,7 @@ let projectsButton = document.querySelectorAll(".goToProjects")
 let skillsButton = document.querySelectorAll(".goToSkills")
 let contactButton = document.querySelectorAll(".goToContact")
 let sectionsArr = {homeSection, aboutSection, projectsSection, skillsSection, contactSection}
+let exploreButton = document.querySelector(".ctaButtonBorder")
 if (window.innerWidth > 700) {
     isOnMobile = false;
 }
@@ -63,6 +64,9 @@ homeButton.forEach(function (homeButton) {
         homeSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
+exploreButton.addEventListener("click", function() {
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+})
 
 aboutButton.forEach(function (aboutButton) {
     aboutButton.addEventListener("click", function () {
