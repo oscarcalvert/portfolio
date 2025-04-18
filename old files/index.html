@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Calvert - Portfolio</title>
+    <link href="./styles/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e75dbde698.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./media/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="loading">
+        <p>
+            designed for a desktop experience.<br>
+            mobile use is discouraged. <br>
+            loading <span id="loadingTime">0</span>%
+        </p>
+    </div>
+    <div id="loaded" class="hidden">
+        <header id="desktopHeader">
+            <ul>
+                <li><a class="goToAbout">About</a></li>
+                <li><a class="goToProjects">Projects</a></li>
+                <li>
+                    <a id="headerIcon" class="goToHome">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 783.97 783.97" width="20" height="20" class="goToHome">
+                            <defs>
+                            </defs>
+                            <path class="cls-1"
+                                d="M761.95,345.67c-.46,70.8-11.7,134.45-39.82,194.55-21.95,46.9-52.38,87.64-89.86,123.22-32.42,30.78-67.83,57.47-107.59,78.15-39.53,20.55-81.27,34.09-125.59,39.38-50.68,6.05-100.83,3.11-150.11-10.3-55.09-14.99-101.89-43.74-140.02-86.4-43.76-48.96-69.29-106.48-80.16-170.86-10.53-62.37-8.76-124.5,5-186.16,13.61-60.97,40.13-115.91,79.61-164.42,37.17-45.67,80.92-83.85,131.83-113.5,42.5-24.76,88.09-41.02,137.13-46.53,59.43-6.68,117.74-1.77,174.29,18.71,51.51,18.66,94.32,49.64,129.12,91.84,37.61,45.61,59.45,98.24,69.21,156.15,2.38,14.11,4.15,28.36,5.42,42.61,1.14,12.76,1.2,25.62,1.53,33.56ZM652.03,439.08c-.4-35.77-3.87-71.16-12.65-105.93-17.52-69.39-52.36-129.32-100.04-182.05-27.85-30.8-61.15-54.28-99.39-70.76-38.74-16.7-78.95-20.69-120.42-14.89-29.42,4.12-57.02,13.39-81.94,29.81-34.61,22.8-58.03,54.96-75.62,91.79-17.83,37.32-26.57,76.96-29.49,118.04-3.34,46.91-.09,93.3,12.19,138.75,22.32,82.62,66.12,151.97,131.31,207.38,45.76,38.89,98.73,59.6,159.3,59.97,37.71.23,72.7-9.04,104.1-29.83,41.51-27.5,70.63-65.39,89.49-111.24,17.25-41.95,22.98-86.02,23.17-131.02Z" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li><a class="goToSkills">Skills</a></li>
+                <li><a class="goToContact">Contact</a></li>
+            </ul>
+        </header>
+        <main>
+            <section id="heroSection">
+                <div id="heroContent">
+                    <img src="./media/title.png" alt="icon">
+                    <p>feel free to look around and...</p>
+                    <div class="ctaButtonArea">
+                        <div class="ctaButtonBorder">
+                            <div class="ctaButtonContent">
+                                explore
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aboutSection">
+                <h2>About</h2>
+                <div id="aboutSectionContent">
+                    <div>
+                        <div class="aboutSectionCard">
+                            <p>WHO?</p>
+                            <p>some information about me</p>
+                            <p>
+                                stuff about me blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
+                            </p>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="aboutSectionCard">
+                            <p>WHEN?</p>
+                            <p>some of my history</p>
+                            <p>
+                                some of my history blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
+                            </p>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="aboutSectionCard">
+                            <p>WHERE?</p>
+                            <p>some information about my education</p>
+                            <p>
+                                where i went to school blah blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah blah
+                                blah blah blah blah blah blah blah blah blah blah blah blah
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projectsSection">
+                <h2>Projects</h2>
+                <div id="projectsArea">
+                    <div>
+                        <div class="projectsAreaProject">
+                            <input name="cb" type="checkbox" id="cb1">
+                            <label for="cb1">
+                                <!-- I KNOW THESE CANT BE LABEL CHILDREN BUT WHATEVER -->
+                                <div class="projectHeader">
+                                    <h4>Connect N</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="projectDesc">
+                                <p>Description: Connect N is a game largely based off Connect 4. Although the amount of
+                                    rows,
+                                    columns, and checkers in a row to win are customizable. Made entirely in Java.
+                                </p>
+                                <a class="projectButton">Coming soon!</a>
+                            </div>
+                        </div>
+                        <div class="projectsAreaProject">
+                            <input name="cb" type="checkbox" id="cb2">
+                            <label for="cb2">
+                                <div class="projectHeader">
+                                    <h4>Spaced</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="projectDesc">
+                                <p>Description: Simple static website I created for an assignment, focuses on mostly
+                                    HTML and CSS.
+                                    The idea for the fictional product was based off the movie
+                                    <a href="https://www.imdb.com/title/tt0100802/">Total Recall</a>.
+                                </p>
+                                <a href="https://oscarcalvert.github.io/Website-rewrite/" class="projectButton">Visit
+                                    Spaced</a>
+                                <a href="https://github.com/oscarcalvert/Website-rewrite" class="projectButton">Github
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="projectsAreaProject">
+                            <input name="cb" type="checkbox" id="cb3">
+                            <label for="cb3">
+                                <div class="projectHeader">
+                                    <h4>Perplexity Rewrite</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="projectDesc">
+                                <p>Description: I really liked the UI <a href="https://www.perplexity.ai/">Perplexity
+                                        AI</a> was using, so for CSS practice
+                                    I decided to recreate it as closely as possible. Although it has since updated and
+                                    changed.
+                                    <span class="extraInfo">(does not work on mobile)</span>
+                                </p>
+                                <a href="https://oscarcalvert.github.io/perplexity-html-rewrite/"
+                                    class="projectButton">Github Project</a>
+                            </div>
+                        </div>
+                        <div class="projectsAreaProject">
+
+                            <input name="cb" type="checkbox" id="cb4">
+                            <label for="cb4">
+                                <div class="projectHeader">
+                                    <h4>Coming soon</h4>
+                                    <div>
+                                        <img src="./media/smallArrow.png" height="20">
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="projectDesc">
+                                <p>Description: coming soon
+                                </p>
+                                <a class="projectButton">Coming soon!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skillsSection">
+                <h2>Skills</h2>
+                <div class="skillsGridWrapper">
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/js.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/java.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Java</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/html.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/css.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/jq.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>JQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/posh.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Powershell</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/office.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Office Suite</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/vscode.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>VSCode profeciency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/jetbrains.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>JetBrains profeciency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/communication.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Communication</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/detail.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Attention to detail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skillBG">
+                            <div class="skillContent">
+                                <div class="skillsImgWrapper">
+                                    <img src="./media/troubleshooting.png" alt="default ALT message" height="50">
+                                </div>
+                                <p>Troubleshooting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contactSection">
+                <h2>Contact</h2>
+                <div class="contactGridWrapper">
+                    <div class="contactOption">
+                        <h3>Send me an email</h3>
+                        <div>
+                            <form>
+                                <input type="text" name="name" id="name" placeholder="Name" size="50">
+                                <input type="text" name="email" id="email" placeholder="Email" size="50">
+                                <input type="text" placeholder="Subject" name="emailSubject" id="emailSubject"
+                                    size="50">
+                                <textarea name="emailMessage" id="emailMessage" rows="5"
+                                    placeholder="Message"></textarea>
+                                <input type="button" value="Submit (doesnt work yet)"> <!-- DOES NOT WORK YET -->
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contactSplitter">
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <p>or</p>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactOption">
+                        <h3>Social Media</h3>
+                        <div class="socialsList">
+                            <ul>
+                                <li><a href="https://www.instagram.com/oscarcalvert01/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i> Instagram</a></li>
+                                <li><a href="https://github.com/oscarcalvert" target="_blank"><i
+                                            class="fa-brands fa-github"></i>
+                                        Github</a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/oscarcalvert/" target="_blank"><i
+                                            class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="mobileFooter">
+            <ul>
+                <li class="removeWhenTooSmall"><a class="goToHome"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a class="goToAbout"><i class="fa-solid fa-book"></i>About</a></li>
+                <li><a class="goToProjects"><i class="fa-solid fa-code"></i>Projects</a></li>
+                <li><a class="goToSkills"><i class="fa-solid fa-bolt"></i>Skills</a></li>
+                <li><a class="goToContact"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            </ul>
+        </div>
+        <footer>
+            <ul>
+                <li><a class="goToHome">Home</a></li>
+                <li><a class="goToAbout">About</a></li>
+                <li><a class="goToProjects">Projects</a></li>
+                <li><a class="goToSkills">Skills</a></li>
+                <li><a class="goToContact">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://www.instagram.com/oscarcalvert01/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://github.com/oscarcalvert" target="_blank"><i class="fa-brands fa-github"></i>
+                        Github</a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/oscarcalvert/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="mailto:oscarcalvert01@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

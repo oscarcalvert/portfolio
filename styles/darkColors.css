@@ -1,0 +1,13 @@
+:root {
+    --bg: #0a0a0a;
+    --text: #f7f7f7;
+    --outline: #d0d0d0;
+    --accent: rgb(73, 184, 140);
+    --shadows: 0px 0px 100px #00000072;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.darkModeButton {
+    display: none;
+}

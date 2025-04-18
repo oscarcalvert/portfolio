@@ -1,0 +1,13 @@
+:root {
+    --bg: #f3f3f3;
+    --text: #060606;
+    --outline: #d0d0d0;
+    --accent: rgb(22, 186, 121);
+    --shadows: 0px 10px 100px #00000063;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.lightModeButton {
+    display: none;
+}
