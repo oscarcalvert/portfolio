@@ -1,0 +1,64 @@
+{
+    "skills": [
+        {
+            "name": "JavaScript",
+            "description": "Core language for web development.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        },
+        {
+            "name": "React",
+            "description": "Library for dynamic user interfaces.",
+            "link": "https://react.dev/"
+        },
+        {
+            "name": "HTML",
+            "description": "Standard web page markup.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        },
+        {
+            "name": "CSS",
+            "description": "Styling for html web pages.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+            "name": "Java",
+            "description": "Platform-independent programming.",
+            "link": "https://www.oracle.com/java/technologies/"
+        },
+        {
+            "name": "SQL",
+            "description": "Database query language.",
+            "link": "https://en.wikipedia.org/wiki/SQL"
+        },
+        {
+            "name": ".NET",
+            "description": "Microsoft development framework.",
+            "link": "https://dotnet.microsoft.com/"
+        },
+        {
+            "name": "C#",
+            "description": ".NET programming language.",
+            "link": "https://dotnet.microsoft.com/en-us/languages/csharp"
+        },
+        {
+            "name": "Azure DevOps",
+            "description": "DevOps platform by Microsoft.",
+            "link": "https://azure.microsoft.com/en-us/products/devops/"
+        },
+        {
+            "name": "Agile",
+            "description": "Iterative development practices.",
+            "link": "https://www.agilealliance.org/"
+        },
+        {
+            "name": "ASP.NET",
+            "description": ".NET framework for enterprise apps",
+            "link": "https:/dotnet.microsoft.com/en-us/apps/aspnet"
+        },
+        {
+            "name": "Troubleshooting",
+            "description": "Resolving technical issues.",
+            "link": "https://en.wikipedia.org/wiki/Troubleshooting"
+        }
+    ]
+}

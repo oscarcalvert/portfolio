@@ -4,10 +4,17 @@
     --outline: #d0d0d0;
     --accent: rgb(22, 186, 121);
     --shadows: 0px 10px 100px #00000063;
+    --outline: #d1d1d1;
+    --panel: #e8e8e8;
     background-color: var(--bg);
     color: var(--text);
 }
 
 .lightModeButton {
     display: none;
+}
+
+
+.skillImage {
+    filter: invert()
 }

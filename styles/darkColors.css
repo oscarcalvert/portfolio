@@ -4,6 +4,8 @@
     --outline: #d0d0d0;
     --accent: rgb(73, 184, 140);
     --shadows: 0px 0px 100px #00000072;
+    --outline: #252525;
+    --panel: #0e0e0e;
     background-color: var(--bg);
     color: var(--text);
 }
