@@ -14,7 +14,6 @@ document.addEventListener('mousemove', (event) => {
     const skillsCircleWidthHalf = skillsCircle.offsetWidth / 2;
     const skillsCircleHeightHalf = skillsCircle.offsetHeight / 2;
 
-    // Adjust the position to center the skillsCircle under the cursor
     skillsCircle.style.left = (mouseX - skillsCircleWidthHalf) + 'px';
     skillsCircle.style.top = (mouseY - skillsCircleHeightHalf) + 'px';
 });
