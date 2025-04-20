@@ -48,7 +48,7 @@ function switchStyles() {
     heroBg.setAttribute("src", `./Media/hero_${currentColor}.jpg`)
 }
 
-fetch("/Media/data/codeSkills.json")
+fetch("./Media/data/codeSkills.json")
     .then(response => {
         return response.json()
     })
