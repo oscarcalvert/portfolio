@@ -29,7 +29,7 @@ class Skill {
 }
 
 
-colorlink.setAttribute("href", `./Styles/${currentColor}Colors.css`)
+colorlink.setAttribute("href", `./styles/${currentColor}Colors.css`)
 heroBg.setAttribute("src", `./Media/hero_${currentColor}.jpg`)
 
 colorswitch.addEventListener("click", switchStyles)
@@ -44,7 +44,7 @@ function switchStyles() {
             break;
     }
     localStorage.setItem("color", currentColor)
-    colorlink.setAttribute("href", `./Styles/${currentColor}Colors.css`)
+    colorlink.setAttribute("href", `./styles/${currentColor}Colors.css`)
     heroBg.setAttribute("src", `./Media/hero_${currentColor}.jpg`)
 }
 
